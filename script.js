@@ -13,7 +13,7 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
 // Function to update the distance on the webpage and show the "Congratulations" message
 function updateDistance(position) {
     const currentLocation = position.coords;
-    const definedPoint = { lat: 41.478357, lon: 2.311172 }; // Replace with your defined point's coordinates
+    const definedPoint = { lat: 41.478458, lon: 2.311177 }; // Replace with your defined point's coordinates
     const distance = calculateDistance(
         currentLocation.latitude,
         currentLocation.longitude,
@@ -26,7 +26,7 @@ function updateDistance(position) {
     distanceElement.textContent = distance.toFixed(0) + " m";
 
     // Show the "Congratulations" message if the distance is less than 3 meters
-    if (distance < 3) {
+    if (distance < 10) {
         const congratsMessage = document.getElementById("congratsMessage");
         congratsMessage.textContent = "El teu codi &eacute;s: 8";
     } else {
