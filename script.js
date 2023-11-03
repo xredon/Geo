@@ -13,7 +13,7 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
 // Function to update the distance on the webpage and show the "Congratulations" message
 function updateDistance(position) {
     const currentLocation = position.coords;
-    const definedPoint = { lat: 41.478458, lon: 2.311177 }; // Replace with your defined point's coordinates
+    const definedPoint = { lat: 41.376252, lon: 2.159580 }; // Replace with your defined point's coordinates
     const distance = calculateDistance(
         currentLocation.latitude,
         currentLocation.longitude,
@@ -28,7 +28,7 @@ function updateDistance(position) {
     // Show the "Congratulations" message if the distance is less than 10 meters
     if (distance < 10) {
         const congratsMessage = document.getElementById("congratsMessage");
-        congratsMessage.textContent = "El teu codi és: 8";
+        congratsMessage.textContent = "Enhorabona! Has arribat. Pren-te uns xurros a la xurreria Pau";
     } else {
         const congratsMessage = document.getElementById("congratsMessage");
         congratsMessage.textContent = "";
