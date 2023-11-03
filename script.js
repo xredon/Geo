@@ -23,7 +23,7 @@ function updateDistance(position) {
 
     // Display the distance in meters at the center of the screen
     const distanceElement = document.getElementById("distance");
-    distanceElement.textContent = distance.toFixed(0) + " meters";
+    distanceElement.textContent = distance.toFixed(0) + " m";
 
     // Show the "Congratulations" message if the distance is less than 3 meters
     if (distance < 3) {
