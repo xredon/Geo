@@ -35,17 +35,6 @@ function updateDistance(position) {
     }
 }
 
-// Function to handle geolocation errors
-function handleLocationError(error) {
-    console.error("Error getting location:", error.message);
-}
-
-// Check if geolocation is available
-if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition(updateDistance, handleLocationError);
-} else {
-    console.error("Geolocation is not available in your browser.");
-}
 // Function to update the distance on the webpage and show the "Congratulations" message
 function updateDistance(position) {
     // Your existing code for calculating and updating the distance
@@ -84,6 +73,18 @@ function refreshLocation() {
     } else {
         console.error("Geolocation is not available in your browser.");
     }
+}
+
+// Function to handle geolocation errors
+function handleLocationError(error) {
+    console.error("Error getting location:", error.message);
+}
+
+// Check if geolocation is available
+if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(updateDistance, handleLocationError);
+} else {
+    console.error("Geolocation is not available in your browser.");
 }
 
 // Add an event listener to the refresh button
