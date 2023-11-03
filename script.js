@@ -25,10 +25,10 @@ function updateDistance(position) {
     const distanceElement = document.getElementById("distance");
     distanceElement.textContent = distance.toFixed(0) + " m";
 
-    // Show the "Congratulations" message if the distance is less than 3 meters
+    // Show the "Congratulations" message if the distance is less than 10 meters
     if (distance < 10) {
         const congratsMessage = document.getElementById("congratsMessage");
-        congratsMessage.textContent = "El teu codi &eacute;s: 8";
+        congratsMessage.textContent = "El teu codi és: 8";
     } else {
         const congratsMessage = document.getElementById("congratsMessage");
         congratsMessage.textContent = "";
