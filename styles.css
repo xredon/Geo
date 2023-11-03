@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+#distance {
+    font-size: 24px;
+    margin-top: 50px;
+    color: #0077cc;
+}
+
+#congratsMessage {
+    font-size: 18px;
+    color: #00aa00;
+    margin-top: 20px;
+}
