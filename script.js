@@ -46,3 +46,46 @@ if ("geolocation" in navigator) {
 } else {
     console.error("Geolocation is not available in your browser.");
 }
+// Function to update the distance on the webpage and show the "Congratulations" message
+function updateDistance(position) {
+    // Your existing code for calculating and updating the distance
+
+    // Hide the "Congratulations" message initially
+    const congratsMessage = document.getElementById("congratsMessage");
+    congratsMessage.textContent = "";
+
+    // Enable the refresh button
+    const refreshButton = document.getElementById("refreshButton");
+    refreshButton.disabled = false;
+}
+
+// Function to handle geolocation errors
+function handleLocationError(error) {
+    // Your existing code for handling geolocation errors
+
+    // Enable the refresh button
+    const refreshButton = document.getElementById("refreshButton");
+    refreshButton.disabled = false;
+}
+
+// Function to refresh the location
+function refreshLocation() {
+    // Disable the refresh button to prevent multiple clicks
+    const refreshButton = document.getElementById("refreshButton");
+    refreshButton.disabled = true;
+
+    // Clear the existing distance and "Congratulations" message
+    document.getElementById("distance").textContent = "Calculating...";
+    document.getElementById("congratsMessage").textContent = "";
+
+    // Request the updated location
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(updateDistance, handleLocationError);
+    } else {
+        console.error("Geolocation is not available in your browser.");
+    }
+}
+
+// Add an event listener to the refresh button
+const refreshButton = document.getElementById("refreshButton");
+refreshButton.addEventListener("click", refreshLocation);
