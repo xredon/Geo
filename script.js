@@ -7,11 +7,9 @@ function updateDistance(position) {
         currentLocation.longitude,
         definedPoint.lat,
         definedPoint.lon
-    ) * 1000; // Convert distance to meters
+    ) * 1000; // Convert distance to meters "";
 
-    // Display the distance in meters at the center of the screen
-    const distanceElement = document.getElementById("distance");
-    distanceElement.textContent = distance.toFixed(2) + " meters";
+    document.getElementById("distance").textContent = distance.toFixed(2); // Display the distance with two decimal 
 
     // Show the "Congratulations" message if the distance is less than 3 meters
     if (distance < 3) {
