@@ -28,7 +28,7 @@ function updateDistance(position) {
     // Show the "Congratulations" message if the distance is less than 3 meters
     if (distance < 3) {
         const congratsMessage = document.getElementById("congratsMessage");
-        congratsMessage.textContent = "Congratulations, you reached your destination!";
+        congratsMessage.textContent = "El teu codi &eacute;s: 8";
     } else {
         const congratsMessage = document.getElementById("congratsMessage");
         congratsMessage.textContent = "";
