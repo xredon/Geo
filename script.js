@@ -13,7 +13,7 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
 // Function to update the distance on the webpage and show the "Congratulations" message
 function updateDistance(position) {
     const currentLocation = position.coords;
-    const definedPoint = { lat: 41.47893021898024, lon: 2.310180226902854 }; // Replace with your defined point's coordinates
+    const definedPoint = { lat: 41.479174711802834, lon: 2.3162073629150988 }; // Replace with your defined point's coordinates
     const distance = calculateDistance(
         currentLocation.latitude,
         currentLocation.longitude,
